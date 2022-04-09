@@ -1,0 +1,13 @@
+body {
+    background-color: #000000;
+    font-family: "Montserrat", sans-serif;
+}
+.navbar-brand {
+    font-weight: 600;
+}
+.white {
+    color: white !important;
+}
+.bg-custom {
+    background-color: #212121;
+}
