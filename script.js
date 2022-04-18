@@ -32,14 +32,17 @@ const loadPage = async function () {
 
     for (const inf of matches) {
         if (
-            inf.competition.includes("SPAIN") ||
-            inf.competition.includes("ENGLAND") ||
+            (inf.competition.includes("SPAIN") &&
+                !inf.competition.includes("2")) ||
+            (inf.competition.includes("ENGLAND") &&
+                !inf.competition.includes("One")) ||
             inf.competition.includes("ITALY") ||
             inf.competition.includes("GERMANY") ||
             inf.competition.includes("PORTUGAL") ||
             inf.competition.includes("NETHERLANDS") ||
             inf.competition.includes("EUROPA LEAGUE") ||
-            inf.competition.includes("CHAMPIONS LEAGUE")
+            (inf.competition.includes("CHAMPIONS LEAGUE") &&
+                !inf.competition.includes("CAF"))
         )
             renderData(inf);
     }
