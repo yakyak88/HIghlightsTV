@@ -31,7 +31,17 @@ const loadPage = async function () {
     console.log(matches);
 
     for (const inf of matches) {
-        if (inf.competition.includes) renderData(inf);
+        if (
+            inf.competition.includes("SPAIN") ||
+            inf.competition.includes("ENGLAND") ||
+            inf.competition.includes("ITALY") ||
+            inf.competition.includes("GERMANY") ||
+            inf.competition.includes("PORTUGAL") ||
+            inf.competition.includes("NETHERLANDS") ||
+            inf.competition.includes("EUROPA LEAGUE") ||
+            inf.competition.includes("CHAMPIONS LEAGUE")
+        )
+            renderData(inf);
     }
 };
 
