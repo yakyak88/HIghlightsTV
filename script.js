@@ -42,7 +42,8 @@ const loadPage = async function () {
             inf.competition.includes("NETHERLANDS") ||
             inf.competition.includes("EUROPA LEAGUE") ||
             (inf.competition.includes("CHAMPIONS LEAGUE") &&
-                !inf.competition.includes("CAF"))
+                !inf.competition.includes("CAF") &&
+                !inf.competition.includes("ASIAN"))
         )
             renderData(inf);
     }
