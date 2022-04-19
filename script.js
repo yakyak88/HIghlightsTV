@@ -35,8 +35,10 @@ const loadPage = async function () {
             (inf.competition.includes("SPAIN") &&
                 !inf.competition.includes("2")) ||
             (inf.competition.includes("ENGLAND") &&
-                !inf.competition.includes("One")) ||
-            inf.competition.includes("ITALY") ||
+                !inf.competition.includes("One") &&
+                !inf.competition.includes("Championship")) ||
+            (inf.competition.includes("ITALY") &&
+                !inf.competition.includes("B")) ||
             inf.competition.includes("GERMANY") ||
             inf.competition.includes("PORTUGAL") ||
             inf.competition.includes("NETHERLANDS") ||
