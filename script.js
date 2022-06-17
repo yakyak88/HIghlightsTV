@@ -45,7 +45,10 @@ const loadPage = async function () {
             inf.competition.includes("EUROPA LEAGUE") ||
             (inf.competition.includes("CHAMPIONS LEAGUE") &&
                 !inf.competition.includes("CAF") &&
-                !inf.competition.includes("ASIAN"))
+                !inf.competition.includes("ASIAN")) ||
+            inf.competition.includes("UEFA") ||
+            (inf.competition.includes("INTERNATIONAL") &&
+                !inf.competition.includes("Woman"))
         )
             renderData(inf);
     }
@@ -70,6 +73,17 @@ const filterBySearch = async function () {
             renderData(flt);
         }
         filterByClick();
+        if (userTyped == "") {
+            $(".row").html(" ");
+            loadPage();
+        }
+        if (
+            !team.title.toLowerCase().includes(userTyped) &&
+            !team.competition.toLowerCase().includes(userTyped) &&
+            userTyped != ""
+        ) {
+            console.log("halooooooo");
+        }
     });
 };
 
